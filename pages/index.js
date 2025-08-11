@@ -92,7 +92,7 @@ export default function Home() {
         <div className="status">
           {lastUpdate ? `Last update: ${lastUpdate.toLocaleString()}` : "Not updated yet"}
         </div>
-        <div className="note">Note : Yang Di Dalam Kurung Adalah Jumlah Stok</div>
+        <div className="note">Note: Yang Di Dalam Kurung Adalah Jumlah Stok</div>
       </footer>
 
       <style jsx>{`
