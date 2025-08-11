@@ -44,19 +44,17 @@ export default function Home() {
   }, []);
 
   const renderList = (items) =>
-    items.map((it, idx) => {
-      const key = it.name.toLowerCase();
-      const emoji = emojiMap[key] || emojiMap.default;
-      return (
-        <li className="item" key={idx}>
-          <div className="left">
-            <div className="emoji">{emoji}</div>
-            <div className="name">{it.name}</div>
-          </div>
-          <div className="val">{it.value}</div>
-        </li>
-      );
-    });
+  items.map((it, idx) => {
+    const key = it.name.toLowerCase();
+    const emoji = emojiMap[key] || emojiMap.default;
+    return (
+      <li className="item" key={idx}>
+        <div className="left">
+          {emoji} {it.name} [{it.value}]
+        </div>
+      </li>
+    );
+  });
 
   return (
     <div className="page">
